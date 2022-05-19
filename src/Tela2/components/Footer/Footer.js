@@ -1,9 +1,16 @@
 
 
 export default function Footer () {
+
+
+    
     return (
-        <>
-        <h1>Footer</h1>
-        </>
+        <div className="footer">
+            <div className="poster-filme"><img src="" alt="HEY"/></div>
+            <div>
+                <div>Nome do filme</div>
+                <div>Data do filme</div>
+            </div>
+        </div>
     );
 }

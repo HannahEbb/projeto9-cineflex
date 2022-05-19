@@ -14,4 +14,3 @@ console.log(idFilme);
     );
 }
 
-// ADD UM ONCLICK AO LADO DE "FILME" COM ARROW FUNCTION para ROTA da Tela2
