@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 export default function Filme ({idFilme, posterURL}) {
 
-console.log(idFilme);
 
     return (
         <Link to={`/sessoes/${idFilme}`} >

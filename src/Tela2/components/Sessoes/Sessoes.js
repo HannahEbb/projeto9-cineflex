@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import Horarios from "../Horarios";
+import Horarios from "../Horarios/Horarios";
 import Footer from "../Footer/Footer";
 
 export default function Sessoes () {
@@ -14,16 +14,18 @@ export default function Sessoes () {
         const promise = axios.get(`https://mock-api.driven.com.br/api/v5/cineflex/movies/${idFilme}/showtimes`);
 
         promise.then(response => {
-            setSessao([...response.data.days])
-            setDados({...response.data})
+            setSessao([...response.data.days]);
+            setDados({...response.data});
 
         })
     }, []);
 
+
     return (
         <>
         <div className="sessoes">
-            {sessao.map(item => <><div>{item.weekday}<span> </span>{item.date}</div> <Horarios dia={item.weekday} hora={item.showtimes}/> </>)}
+            {sessao.map(item => <><div>{item.weekday}<span> </span>{item.date}</div> 
+            <Horarios hora={item.showtimes}/> </>)}
         </div>
         <Footer title={dados.title} posterURL={dados.posterURL}/>
         </>

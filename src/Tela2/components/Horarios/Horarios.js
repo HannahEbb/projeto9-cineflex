@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
+import Botaohora from "../Botaohora/Botaohora";
 
 
-export default function Horarios ( {hora, dia} ) {
+export default function Horarios ( { hora } ) {
 
     const [horarios, setHorarios] = useState([]);
 
@@ -10,8 +11,10 @@ export default function Horarios ( {hora, dia} ) {
     }, [])
 
     return (
+       
         <div className="hora">
-        {horarios.map(i => <div className="botao-hora">{i.name}</div> )}
+        {horarios.map(i => <Botaohora idSessao ={i.id} name={i.name}/>)}
         </div>
+    
     );
 }
