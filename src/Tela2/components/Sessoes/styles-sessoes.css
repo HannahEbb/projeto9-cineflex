@@ -1,7 +1,8 @@
 
 .sessoes {
-    padding-top: 200px;
+    padding-top: 185px;
     padding-left: 23px;
+    padding-bottom: 110px;
     color: #293845;
     font-size: 20px;
     font-weight: 400;
@@ -10,7 +11,8 @@
 .hora {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 23px;
+    margin-top: 20px;
+    margin-bottom: 23px;
 }
 
 .botao-hora {
@@ -22,7 +24,7 @@
     font-weight: 400;
     border-radius: 3px;
     margin-right: 8px;
+    display: flex;
     justify-content: center;
-    text-align: center;
-    
+    align-items: center;    
 }

@@ -1,15 +1,15 @@
 
 
-export default function Footer () {
+export default function Footer ({title, posterURL}) {
 
 
     
     return (
         <div className="footer">
-            <div className="poster-filme"><img src="" alt="HEY"/></div>
+            <div className="poster-filme"><img width="48px" height="72px" src={posterURL} alt="HEY"/></div>
             <div>
-                <div>Nome do filme</div>
-                <div>Data do filme</div>
+                <div>{title}</div>
+                <div>"Data do filme"</div>
             </div>
         </div>
     );
