@@ -1,11 +1,14 @@
+import { useState } from "react";
 
 
+// vai receber como prop o array com os assentos selecionados
 export default function Comprador () {
 
-const [digitarnome, setDigitarnome] = ("");
-const [digitarcpf, setDigitarcpf] = ("");
+const [digitarnome, setDigitarnome] = useState("");
+const [digitarcpf, setDigitarcpf] = useState("");
 
-// function reservar {
+// function reservar () {
+    // vai fazer um post do array de assentos + dados do input
 
 // }
 
@@ -15,11 +18,11 @@ const [digitarcpf, setDigitarcpf] = ("");
         <div className="container-comprador">
         <div className="dados-comprador">
             <p>Digite o nome do comprador:</p>
-            <input placeholder="  Digite seu nome" value={digitarnome} onChange={event => setDigitarnome(event.target.value)}></input>
+            <input type="text" placeholder="  Digite seu nome" value={digitarnome} onChange={event => setDigitarnome(event.target.value)} />
         </div>
         <div className="dados-comprador">
             <p>CPF do comprador:</p>
-            <input placeholder="  Digite seu CPF" value={digitarcpf} onChange={e => setDigitarcpf(e.target.value)}></input>
+            <input type="text" placeholder="  Digite seu CPF" value={digitarcpf} onChange={e => setDigitarcpf(e.target.value)} />
         </div>
         </div>
         <div className="container-botao">

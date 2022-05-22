@@ -21,9 +21,9 @@ export default function Assentos () {
             setAssentos([...response.data.seats]);
         })
 
-    }, []);
+    }, [idSessao]);
 
-    console.log(rodape);
+    //console.log(rodape);
     console.log(assentos);
 
     return (

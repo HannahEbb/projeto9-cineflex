@@ -18,7 +18,7 @@ export default function Sessoes () {
             setDados({...response.data});
 
         })
-    }, []);
+    }, [idFilme]);
 
 
     return (
