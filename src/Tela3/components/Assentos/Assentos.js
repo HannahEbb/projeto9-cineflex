@@ -24,6 +24,11 @@ export default function Assentos () {
         <div className="assentos">
             {assentos.map(a => <Assento name={a.name} isAvailabe={a.isAvailabe}/>)}
         </div>
+        <div className="legenda">
+            <div><div className="selecionado">0</div><p>Selecionado</p></div>
+            <div><div className="disponivel">0</div><p>Disponível</p></div>
+            <div><div className="indisponivel">0</div><p>Indisponível</p></div>
+        </div>
         </>
 
     );

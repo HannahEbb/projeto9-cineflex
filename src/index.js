@@ -11,7 +11,6 @@ import "./Tela2/components/Sessoes/styles-sessoes.css";
 import "./Tela2/components/Footer/styles-footer.css";
 import "./Tela3/components/Assentos/styles-assentos.css";
 import "./Tela3/components/Comprador/styles-comprador.css";
-import "./Tela3/components/Assento/styles-assento.css";
 
 
 
