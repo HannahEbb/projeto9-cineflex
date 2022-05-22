@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import Horarios from "../Horarios/Horarios";
 import Footer from "../Footer/Footer";
+import Data from "../Data/Data";
 
 export default function Sessoes () {
     const { idFilme } = useParams();
@@ -24,10 +24,9 @@ export default function Sessoes () {
     return (
         <>
         <div className="sessoes">
-            {sessao.map(item => <><div>{item.weekday}<span> </span>{item.date}</div> 
-            <Horarios hora={item.showtimes}/> </>)}
+            {sessao.map(item => <><Data key={item.id} dia={item.weekday} data={item.date} hora={item.showtimes}/></>)}
         </div>
-        <Footer title={dados.title} posterURL={dados.posterURL}/>
+        <Footer key={dados.id} title={dados.title} posterURL={dados.posterURL}/>
         </>
     );
 }

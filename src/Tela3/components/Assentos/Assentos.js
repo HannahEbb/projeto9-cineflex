@@ -9,7 +9,7 @@ import Footer from "../../../Tela2/components/Footer/Footer";
 export default function Assentos () {
     const { idSessao } = useParams();
 
-    const [sessao, setSessao] = useState({});
+    const [rodape, setRodape] = useState({});
     const [assentos, setAssentos] = useState([]);
 
 
@@ -17,17 +17,19 @@ export default function Assentos () {
         const promise = axios.get(`https://mock-api.driven.com.br/api/v5/cineflex/showtimes/${idSessao}/seats`);
 
         promise.then(response => {
-            setSessao({...response.data});
+            setRodape({...response.data});
             setAssentos([...response.data.seats]);
         })
-    }, []);
-    console.log(sessao);
 
+    }, []);
+
+    console.log(rodape);
+    console.log(assentos);
 
     return (
         <>
         <div className="assentos">
-            {assentos.map(a => <Assento name={a.name} isAvailable={a.isAvailable}/>)}
+            {assentos.map(a => <Assento key={a.id} name={a.name} isAvailable={a.isAvailable}/>)}
         </div>
         <div className="legenda">
             <div><div className="select">0</div><p>Selecionado</p></div>
@@ -40,5 +42,5 @@ export default function Assentos () {
 
     );
 
-    //posterURL={sessao.movie.posterURL} title={sessao.movie.title} diasemana={sessao.day.weekday} data={sessao.name}
+    //posterURL={rodape.movie.posterURL} title={rodape.movie.title} diasemana={rodape.day.weekday} data={rodape.name}
 }

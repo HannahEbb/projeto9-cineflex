@@ -23,7 +23,8 @@ export default function Filmes () {
 
     return(
         <div className="filmes">
-        {filmes.map(filme => <Filme idFilme={filme.id} 
+        {filmes.map(filme => <Filme key={filme.id}
+                                    idFilme={filme.id} 
                                     title={filme.title} 
                                     posterURL={filme.posterURL}
                                     overview={filme.overview}
