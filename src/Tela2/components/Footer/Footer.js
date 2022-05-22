@@ -1,6 +1,6 @@
 
 
-export default function Footer ({title, posterURL}) {
+export default function Footer ({title, posterURL, diasemana, data}) {
 
 
     
@@ -9,7 +9,7 @@ export default function Footer ({title, posterURL}) {
             <div className="poster-filme"><img width="48px" height="72px" src={posterURL} alt="HEY"/></div>
             <div>
                 <div>{title}</div>
-                <div></div>
+                <div>{diasemana}<span> </span>{data}</div>
             </div>
         </div>
     );

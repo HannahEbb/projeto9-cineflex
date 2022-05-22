@@ -1,11 +1,11 @@
 
 
-export default function Info () {
+export default function Info ({ frase }) {
 
     return(
         <>
         <div className="info">
-            Selecione o filme
+           {frase}
         </div>
         </>
     );

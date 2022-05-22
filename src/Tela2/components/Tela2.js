@@ -5,7 +5,7 @@ import Sessoes from "./Sessoes/Sessoes";
 export default function Tela2 () {
     return (
         <>
-        <Top />
+        <Top frase={"Selecione a sessão"}/>
         <Sessoes />
         </>
     );

@@ -1,11 +1,11 @@
 import Header from "../Header/Header";
 import Info from "../Info/Info";
 
-export default function Top () {
+export default function Top ( {frase} ) {
     return(
         <div className="top">
             <Header />
-            <Info />
+            <Info frase={ frase }/>
         </div>
     );
 }

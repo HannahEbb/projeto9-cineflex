@@ -5,7 +5,7 @@ import Filmes from "./Filmes/Filmes";
 export default function Tela1 () {
     return (
         <>
-        <Top />
+        <Top frase={"Selecione o filme"}/>
         <Filmes />
         </>
     );

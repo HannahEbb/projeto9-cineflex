@@ -1,0 +1,32 @@
+
+.assento {
+    margin-right: 7px;
+    color: #000000;
+    font-size: 11px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 26px;
+    height: 26px;
+    background-color: #C3CFD9;
+    border: 1px solid #808F9D;
+    border-radius: 12px;
+
+}
+
+
+.selecionado {
+    background-color: #8DD7CF;
+    border: 1px solid #1AAE9E;
+}
+
+.disponivel {
+    background-color: #C3CFD9;
+    border: 1px solid #7B8B99;
+}
+
+.indisponivel {
+    background-color: #FBE192;
+    border: 1px solid #F7C52B;
+}
