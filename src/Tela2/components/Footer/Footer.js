@@ -2,7 +2,6 @@
 
 export default function Footer ({title, posterURL, diasemana, data}) {
 
-
     
     return (
         <div className="footer">

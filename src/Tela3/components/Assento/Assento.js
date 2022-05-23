@@ -6,14 +6,14 @@ export default function Assento({name, isAvailable}) {
 
     const [status, setAssento] = useState("assento");
     const [arrayIds, setIds] = useState([]);
-    
  
 
     function selectSeat() {   
          if(isAvailable && status==="assento") {
               setAssento("assento selecionado");
-              setIds([...arrayIds, Number(name)]);    
-              
+              let novoArray = [...arrayIds, Number(name)]
+              setIds([...novoArray]);  
+ 
          } else if(isAvailable && status==="assento selecionado") {
              setAssento("assento");
     
@@ -21,7 +21,6 @@ export default function Assento({name, isAvailable}) {
              alert ("Assento indisponível!");
          }
        }
-
 
     return (
 

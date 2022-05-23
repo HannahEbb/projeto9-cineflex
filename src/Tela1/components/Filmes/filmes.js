@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import Filme from "../Filme/Filme";
 
 
-//DIV QUE CONTÉM OS FILMES, RENDERIZA OS FILMES E PASSA PARAMETROS VIA PROPS
 
 export default function Filmes () {
 

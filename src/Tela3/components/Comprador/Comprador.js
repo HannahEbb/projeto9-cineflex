@@ -2,14 +2,10 @@ import { useState } from "react";
 import Botaoreservar from "../Botaoreservar/Botaoreservar";
 
 
-
-// vai receber como prop o array com os assentos selecionados
 export default function Comprador () {
 
-
-const [digitarnome, setDigitarnome] = useState("");
-const [digitarcpf, setDigitarcpf] = useState("");
-
+    const [digitarnome, setDigitarnome] = useState("");
+    const [digitarcpf, setDigitarcpf] = useState("");
 
 
     return (

@@ -2,6 +2,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 
+
 export default function Botaoreservar ({nome, cpf}) {
 
     function reservar () {
@@ -19,14 +20,12 @@ export default function Botaoreservar ({nome, cpf}) {
           promise.then((res) => {
             console.log(res.data);
           });
-
     }
    
-
     return (
         <Link to="/sucesso">
         <div className="container-botao">
-            <div className="botao-reservar" onClick={reservar} >Reservar assentos</div>
+            <div className="botao-reservar" onClick={reservar}>Reservar assentos</div>
         </div>
         </Link>
     );

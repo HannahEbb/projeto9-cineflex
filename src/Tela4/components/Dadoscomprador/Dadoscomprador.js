@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
+import Botaoreservar from "../../../Tela3/components/Botaoreservar/Botaoreservar";
 
-export default function DadosComprador () {
+export default function DadosComprador ({nome, cpf}) {
 
     return(
         <>
@@ -17,8 +18,8 @@ export default function DadosComprador () {
             </div>
             <div className="container-dados-comprador">
                 <div className="tipo-de-dado">Comprador</div>
-                <div className="dados">nome comprador</div>
-                <div className="dados">cpf comprador</div>
+                <div className="dados">{nome}</div>
+                <div className="dados">{cpf}</div>
             </div>
         </div>
 

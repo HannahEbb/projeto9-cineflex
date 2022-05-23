@@ -5,9 +5,6 @@ import Tela3 from "../../Tela3/components/Tela3";
 import Tela4 from "../../Tela4/components/Tela4";
 
 
-//ANTES EU CRIO OS COMPONENTE MENORES AQUI PARA RENDERIZAR E VER SE LAYOUT ESTÁ OK
-//UM COMPONENTE POR PÁGINA
-
 
 export default function App() {
 
@@ -19,7 +16,6 @@ export default function App() {
                 <Route path="/assentos/:idSessao" element={<Tela3 />} />
                 <Route path="/sucesso" element={<Tela4 />} />
                 <Route path="/" element={<Tela1 />} />
-
             </Routes>
         </BrowserRouter>
     );
