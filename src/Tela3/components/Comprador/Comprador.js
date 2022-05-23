@@ -1,8 +1,10 @@
 import { useState } from "react";
 
 
+
 // vai receber como prop o array com os assentos selecionados
 export default function Comprador () {
+
 
 const [digitarnome, setDigitarnome] = useState("");
 const [digitarcpf, setDigitarcpf] = useState("");

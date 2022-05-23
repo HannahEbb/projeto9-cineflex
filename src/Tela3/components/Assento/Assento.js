@@ -1,27 +1,38 @@
 import React from "react";
-import { useState } from "react/cjs/react.production.min";
+import { useState } from 'react';
 
 
 export default function Assento({name, isAvailable}) {
 
-    const [status, setAssento] = React.useState("assento");
+    const [status, setAssento] = useState("assento");
+    const [arrayIds, setIds] = useState([]);
+    
+ 
 
-  
     function selectSeat() {   
-         if(isAvailable) {
-         //ternário para alterar de selecionado para não selecionado
+         if(isAvailable && status==="assento") {
               setAssento("assento selecionado");
+              setIds([...arrayIds, Number(name)]);    
+              
+         } else if(isAvailable && status==="assento selecionado") {
+             setAssento("assento");
+    
          } else {
-             setAssento("assento indisponivel");
              alert ("Assento indisponível!");
          }
-        
        }
 
 
     return (
+
+        <>
+        { (!isAvailable) ? 
+        <div onClick={selectSeat} className={"assento indisponivel"}>
+        {name}</div> : 
         <div onClick={selectSeat} className={status}>
-            {name} {isAvailable} 
-        </div>
+        {name}</div>}
+        </>
+        
     );
 }
+

@@ -9,7 +9,7 @@ import Footer from "../../../Tela2/components/Footer/Footer";
 export default function Assentos () {
     const { idSessao } = useParams();
 
-    const [rodape, setRodape] = useState({});
+   // const [rodape, setRodape] = useState({});
     const [assentos, setAssentos] = useState([]);
 
 
@@ -17,14 +17,11 @@ export default function Assentos () {
         const promise = axios.get(`https://mock-api.driven.com.br/api/v5/cineflex/showtimes/${idSessao}/seats`);
 
         promise.then(response => {
-            setRodape({...response.data});
+           // setRodape({...response.data});
             setAssentos([...response.data.seats]);
         })
 
     }, [idSessao]);
-
-    //console.log(rodape);
-    console.log(assentos);
 
     return (
         <>
