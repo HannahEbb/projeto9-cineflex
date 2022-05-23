@@ -23,7 +23,6 @@ export default function Assentos () {
 
     }, [idSessao]);
 
-    console.log(assentos);
 
     return (
         <>

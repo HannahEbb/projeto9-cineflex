@@ -20,9 +20,6 @@ export default function Sessoes () {
         })
     }, [idFilme]);
 
-    console.log(sessao);
-    console.log(dados);
-
 
     return (
         <>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Botaoreservar from "../Botaoreservar/Botaoreservar";
 
 
 
@@ -9,10 +10,6 @@ export default function Comprador () {
 const [digitarnome, setDigitarnome] = useState("");
 const [digitarcpf, setDigitarcpf] = useState("");
 
-// function reservar () {
-    // vai fazer um post do array de assentos + dados do input
-
-// }
 
 
     return (
@@ -27,9 +24,7 @@ const [digitarcpf, setDigitarcpf] = useState("");
             <input type="text" placeholder="  Digite seu CPF" value={digitarcpf} onChange={e => setDigitarcpf(e.target.value)} />
         </div>
         </div>
-        <div className="container-botao">
-            <div className="botao-reservar" /*onClick={reservar}*/>Reservar assentos</div>
-        </div>
+        <Botaoreservar nome={digitarnome} cpf={digitarcpf}/>
         </>
 
     );
