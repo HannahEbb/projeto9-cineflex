@@ -9,7 +9,7 @@ import Footer from "../../../Tela2/components/Footer/Footer";
 export default function Assentos () {
     const { idSessao } = useParams();
 
-   // const [rodape, setRodape] = useState({});
+    //const [footer, setFooter] = useState({});
     const [assentos, setAssentos] = useState([]);
 
 
@@ -17,11 +17,13 @@ export default function Assentos () {
         const promise = axios.get(`https://mock-api.driven.com.br/api/v5/cineflex/showtimes/${idSessao}/seats`);
 
         promise.then(response => {
-           // setRodape({...response.data});
+            //setFooter({...response.data});
             setAssentos([...response.data.seats]);
         })
 
     }, [idSessao]);
+
+    console.log(assentos);
 
     return (
         <>
@@ -34,10 +36,9 @@ export default function Assentos () {
             <div><div className="indisp">0</div><p>Indisponível</p></div>
         </div>
         <Comprador />
-        <Footer />
+        <Footer /*posterURL={footer.movie.posterURL} title={footer.movie.title} diasemana={footer.day.weekday} data={footer.name}*/ />
         </>
 
     );
 
-    //posterURL={rodape.movie.posterURL} title={rodape.movie.title} diasemana={rodape.day.weekday} data={rodape.name}
 }
